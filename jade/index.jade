@@ -1,0 +1,145 @@
+doctype html
+html(lang="rus")
+	head
+		meta(name="apple-mobile-web-app-capable" content="yes")
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+		
+		title Theme
+		
+		link(rel="stylesheet", href="css/style.css")
+		
+	body 
+		
+		header
+			.logo
+				img(src="/img/logo.svg" onerror="this.onerror=null; this.src='image.png'")
+			nav
+				a(href="#about") about
+				a(href="#projects") projects
+				a(href="#contact") contact
+			h1 
+				span russell dora
+			p.subtitle dreamer // coder // traveller
+		
+
+		section.about
+			h3#about About myself
+			.icon-block
+				.face-img
+			.text-block
+				p <strong> Hello! My name is Russell. </strong> I am a front-end developer from Ukraine. Most of my time I do psd to html/css conversions.I am always ready to get involved in serious web projects. I love to write beautiful, clean code and make my clients happy about the final result.
+			.skill-block
+				.skill-item
+					.skill-name HTML5
+					.skill-icons.skill-7
+						<span></span><span></span><span></span><span></span><span></span>
+						<span></span><span></span><span></span><span></span><span></span>
+				.skill-item
+					.skill-name CSS3
+					.skill-icons.skill-7
+						<span></span><span></span><span></span><span></span><span></span>
+						<span></span><span></span><span></span><span></span><span></span>
+				.skill-item
+					.skill-name SASS
+					.skill-icons.skill-7
+						<span></span><span></span><span></span><span></span><span></span>
+						<span></span><span></span><span></span><span></span><span></span>
+				.skill-item
+					.skill-name JADE
+					.skill-icons.skill-10
+						<span></span><span></span><span></span><span></span><span></span>
+						<span></span><span></span><span></span><span></span><span></span>
+				.skill-item
+					.skill-name BOOTSTRAP
+					.skill-icons.skill-6
+						<span></span><span></span><span></span><span></span><span></span>
+						<span></span><span></span><span></span><span></span><span></span>
+				.skill-item
+					.skill-name JAVASCRIPT
+					.skill-icons.skill-3
+						<span></span><span></span><span></span><span></span><span></span>
+						<span></span><span></span><span></span><span></span><span></span>
+				.skill-item
+					.skill-name GIT/GITHUB
+					.skill-icons.skill-5
+						<span></span><span></span><span></span><span></span><span></span>
+						<span></span><span></span><span></span><span></span><span></span>
+				.skill-item 
+					.skill-name PHOTOSHOP
+					.skill-icons.skill-6
+						<span></span><span></span><span></span><span></span><span></span>
+						<span></span><span></span><span></span><span></span><span></span>
+		
+
+		section.projects
+			h3#projects My projects
+			.container
+				a(href="http://skaut.russell-dora.com.ua/").container-item
+					.container-overlay
+						strong skaut system
+						
+				a(href="http://taxi.russell-dora.com.ua/").container-item
+					.container-overlay
+						strong  kazahstan taxi
+						
+				a(href="http://gw.russell-dora.com.ua/").container-item
+					.container-overlay
+						strong green Wood design
+						
+				a(href="http://powar.russell-dora.com.ua/").container-item
+					.container-overlay
+						strong chief for rent service
+
+				a(href="http://wshytko.russell-dora.com.ua/").container-item
+					.container-overlay
+						strong vshytko news
+						
+				a(href="http://crm.russell-dora.com.ua/").container-item
+					.container-overlay
+						strong protect CRM system
+										
+				a(href="").container-item
+					.container-overlay
+						strong empty
+						
+				a(href="").container-item
+					.container-overlay
+						strong empty
+		
+
+		section.contact
+			.container
+				h3#contact contact me
+				.social-links
+					a(href="https://twitter.com/Ruslan_Dora").icon-twitter
+					a(href="https://www.youtube.com/channel/UC02cY0XAsL1AkxnK3JQZxCg").icon-youtube
+					a(href="https://www.facebook.com/russelldor").icon-facebook
+					a(href="https://github.com/Russelldor").icon-github
+					a(href="https://www.odesk.com/users/~01a2fe50b39eff0316").icon-odesk
+				hr.bar
+				a.bigLink#bl(href="mailto:russelldor@icloud.com") russelldor@icloud.com
+		
+			
+		section.form
+			h3#form Let's work together		
+			form(method ="post" action="//formspree.io/russelldor@icloud.com")
+				.contact-info-group
+					label
+						span Your Name
+						input(type="text" name="name")
+					
+					label
+						span Your Email
+						input(type="email" name="_replyto")
+				
+				label
+					span Tell me about your project
+					textarea(name="message")
+				.submit-wrap
+					input(type="submit" value="Send")
+
+		//- Scripts
+		script(src="js/jquery-2.1.3.min.js")
+		script(src="js/main.js")
+		script(src="js/jquery.tubular.1.0.js")

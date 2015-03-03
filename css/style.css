@@ -43,7 +43,7 @@
   content: "\eab2";
 }
 
-header nav a, header .subtitle, .about h3, section.projects h3, section.contact .container h3, section.form h3 {
+h3, header nav a, header .subtitle {
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
@@ -52,6 +52,12 @@ header nav a, header .subtitle, .about h3, section.projects h3, section.contact 
 body {
   font-family: Open Sans;
   background: #fff;
+}
+
+h3 {
+  color: #c99065;
+  text-align: center;
+  padding: 100px 0 30px;
 }
 
 header {
@@ -66,13 +72,11 @@ header .logo {
   margin: 10px 0 0 30px;
 }
 header .logo img {
-  z-index: 1;
-  opacity: 0.4;
   height: 100%;
   width: 100%;
+  opacity: 0.4;
 }
 header nav {
-  z-index: 2;
   float: right;
   padding: 30px 30px 0 0;
 }
@@ -107,48 +111,42 @@ header .subtitle {
   letter-spacing: 0.05em;
 }
 
-.about h3 {
-  color: #c99065;
-  text-align: center;
-  padding: 100px 0 30px;
-}
-.about .icon-block {
+section.about .avatar-block {
   max-width: 790px;
   margin: 0 auto;
 }
-.about .icon-block .face-img {
+section.about .avatar-block .face-img {
   height: 181px;
   width: 181px;
   background: url(../img/face.jpg);
   margin: 0 auto;
 }
-.about .text-block {
+section.about .text-block {
   max-width: 620px;
   padding: 0 15px;
-  margin: 50px auto;
+  margin: 70px auto 0;
   text-align: center;
   color: #666666;
   font-size: 24px;
   font-weight: 300;
 }
-.about .skill-block {
+section.about .skill-block {
   max-width: 540px;
-  margin: 100px auto;
+  margin: 70px auto 70px;
   color: #999;
 }
-.about .skill-block:after {
+section.about .skill-block:after {
   content: "";
   display: table;
   clear: both;
 }
 
 .about .skillbar {
+  box-sizing: border-box;
   width: 250px;
   height: 50px;
-  position: relative;
   margin-bottom: 30px;
   background-color: #edebec;
-  box-sizing: border-box;
   border-radius: 3px;
   float: left;
   margin-right: 20px;
@@ -156,7 +154,6 @@ header .subtitle {
 .about .skillbar .count-bar {
   height: 100%;
   width: 0px;
-  position: relative;
   height: 50px;
   background-color: #249292;
 }
@@ -171,11 +168,6 @@ header .subtitle {
 
 section.projects {
   background: #e5eaee;
-}
-section.projects h3 {
-  padding: 100px 0 30px;
-  color: #c99065;
-  text-align: center;
 }
 section.projects .container {
   max-width: 960px;
@@ -241,9 +233,9 @@ section.projects .container .container-item .container-overlay {
   -o-justify-content: space-around;
   justify-content: space-around;
   -ms-flex-pack: center;
+  transition: 1s;
   background: rgba(201, 144, 101, 0.9);
   height: 100%;
-  transition: 1s;
   text-align: center;
 }
 section.projects .container .container-item .container-overlay strong {
@@ -267,14 +259,7 @@ section.contact .container {
   margin: 0 auto;
   padding-bottom: 100px;
 }
-section.contact .container h3 {
-  color: #c99065;
-  text-align: center;
-  padding: 100px 0 30px;
-}
 section.contact .container .social-links {
-  max-width: 700px;
-  margin: 0px auto 50px;
   display: box;
   display: -webkit-flex;
   display: -moz-flex;
@@ -287,18 +272,20 @@ section.contact .container .social-links {
   -o-justify-content: space-around;
   justify-content: space-around;
   -ms-flex-pack: center;
+  max-width: 700px;
+  margin: 0px auto 50px;
 }
 section.contact .container .social-links a {
-  display: block;
-  background: #c99065;
   height: 50px;
   width: 50px;
+  transition: all 0.15s ease-out 0s;
+  display: block;
+  background: #c99065;
   line-height: 50px;
   color: white;
   border-radius: 50%;
   font-size: 28px;
   text-decoration: none;
-  transition: all 0.15s ease-out 0s;
 }
 section.contact .container .social-links a:hover {
   -webkit-transform: scale(1.2);
@@ -332,19 +319,14 @@ section.form {
   background: #e5eaee;
   height: 100%;
 }
-section.form h3 {
-  color: #c99065;
-  text-align: center;
-  padding: 100px 0 30px;
-}
 section.form form {
   max-width: 500px;
   margin: 0 auto 50px;
 }
 section.form form .contact-info-group label {
+  box-sizing: border-box;
   width: 50%;
   float: left;
-  box-sizing: border-box;
 }
 section.form form .contact-info-group label:nth-child(1) {
   padding-right: 10px;
@@ -353,9 +335,9 @@ section.form form .contact-info-group label:nth-child(2) {
   padding-left: 10px;
 }
 section.form form input, section.form form textarea {
+  box-sizing: border-box;
   border: 3px solid #c99065;
   width: 100%;
-  box-sizing: border-box;
   padding: 10px;
 }
 section.form form input:focus, section.form form textarea:focus {
@@ -414,7 +396,7 @@ section.form form .submit-wrap [type="submit"]:hover {
   }
 }
 @media screen and (max-width: 650px) {
-  .about .icon-block {
+  .about .avatar-block {
     display: block;
     text-align: center;
   }
@@ -423,19 +405,19 @@ section.form form .submit-wrap [type="submit"]:hover {
     display: inline-block;
   }
 
-  .about .icon-block .face-img {
+  .about .avatar-block .face-img {
     background-position: center center;
     background-repeat: no-repeat;
     width: 100%;
     margin-bottom: 30px;
   }
 
-  .about .icon-block [class^="icon-"] {
-    margin: 10px;
-  }
-
   .about .text-block {
     margin-top: 0;
+  }
+
+  .about .skill-block {
+    margin-top: -10px;
   }
 }
 @media screen and (max-width: 760px) {

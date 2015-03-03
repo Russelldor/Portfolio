@@ -5,15 +5,15 @@ html(lang="rus")
 		meta(charset="utf-8")
 		meta(name="viewport" content="width=device-width, initial-scale=1")
 		
-		title Theme
+		title Portfolio
 		
 		link(rel="stylesheet", href="css/style.css")
 		
-	body 
-		
+	body
+
 		header
 			.logo
-				img(src="/img/logo.svg" onerror="this.onerror=null; this.src='image.png'")
+				img(src="/img/logo.svg")
 			nav
 				a(href="#about") about
 				a(href="#projects") projects
@@ -25,7 +25,7 @@ html(lang="rus")
 
 		section.about
 			h3#about About myself
-			.icon-block
+			.avatar-block
 				.face-img
 			.text-block
 				p <strong> Hello! My name is Russell. </strong> I am a Ukrainian based front-end developer specializing in fixed and adaptive PSD to HTML conversions. I have an eye for detail and a passion to write beautiful & clean code. Currently working at oDesk as Freelancer. I am always ready to get involved in serious web projects. I love travelling, photography, video games & cats.
@@ -75,35 +75,35 @@ html(lang="rus")
 		section.projects
 			h3#projects My projects
 			.container
-				a(href="http://skaut.russell-dora.com.ua/").container-item
+				a.container-item(href="http://skaut.russell-dora.com.ua/")
 					.container-overlay
 						strong skaut system
 						
-				a(href="http://taxi.russell-dora.com.ua/").container-item
+				a.container-item(href="http://taxi.russell-dora.com.ua/")
 					.container-overlay
 						strong  kazahstan taxi
 						
-				a(href="http://gw.russell-dora.com.ua/").container-item
+				a.container-item(href="http://gw.russell-dora.com.ua/")
 					.container-overlay
 						strong green Wood design
 						
-				a(href="http://powar.russell-dora.com.ua/").container-item
+				a.container-item(href="http://powar.russell-dora.com.ua/")
 					.container-overlay
 						strong chief for rent service
 
-				a(href="http://wshytko.russell-dora.com.ua/").container-item
+				a.container-item(href="http://wshytko.russell-dora.com.ua/")
 					.container-overlay
 						strong vshytko news
 						
-				a(href="http://crm.russell-dora.com.ua/").container-item
+				a.container-item(href="http://crm.russell-dora.com.ua/")
 					.container-overlay
 						strong protect CRM system
 										
-				a(href="").container-item
+				a.container-item(href="")
 					.container-overlay
 						strong empty
 						
-				a(href="").container-item
+				a.container-item(href="")
 					.container-overlay
 						strong empty
 		
@@ -112,18 +112,18 @@ html(lang="rus")
 			.container
 				h3#contact contact me
 				.social-links
-					a(href="https://twitter.com/Ruslan_Dora").icon-twitter
-					a(href="https://www.youtube.com/channel/UC02cY0XAsL1AkxnK3JQZxCg").icon-youtube
-					a(href="https://www.facebook.com/russelldor").icon-facebook
-					a(href="https://github.com/Russelldor").icon-github
-					a(href="https://www.odesk.com/users/~01a2fe50b39eff0316").icon-odesk
+					a.icon-twitter(href="https://twitter.com/Ruslan_Dora")
+					a.icon-youtube(href="https://www.youtube.com/channel/UC02cY0XAsL1AkxnK3JQZxCg")
+					a.icon-facebook(href="https://www.facebook.com/russelldor")
+					a.icon-github(href="https://github.com/Russelldor")
+					a.icon-odesk(href="https://www.odesk.com/users/~01a2fe50b39eff0316")
 				hr.bar
 				a.bigLink#bl(href="mailto:russelldor@icloud.com") russelldor@icloud.com
 		
 			
 		section.form
 			h3#form Let's work together		
-			form(method ="post" action="//formspree.io/russelldor@icloud.com")
+			form(method="post" action="//formspree.io/russelldor@icloud.com")
 				.contact-info-group
 					label
 						span Your Name

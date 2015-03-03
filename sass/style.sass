@@ -3,6 +3,7 @@
 @import 'icon-font.scss'
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=cyrillic,latin)
 
+// -------------------- PLACEHOLDER SELECTORS  ----------------
 
 %small-bold
 	font:
@@ -13,14 +14,21 @@
 %skill-color
 	background: #999
 
-  
+// -------------------- VARIABLES ----------------
+
 $accent: #c99065
 $documentBG: #fff
 $greyColor: #e5eaee
 
+
 body 
 	font-family: Open Sans
 	background: $documentBG
+h3 
+	@extend %small-bold
+	color: $accent
+	text-align: center
+	padding: 100px 0 30px
 
 header
 	background: url("/img/hero-bg.jpg") center center no-repeat
@@ -31,13 +39,10 @@ header
 		float: left
 		margin: 10px 0 0 30px
 		img 
-			position:relative
-			z-index: 1
-			opacity: 0.4
 			+size(100%)
+			opacity: 0.4
+			
 	nav 
-		position:relative
-		z-index: 2
 		float: right
 		padding: 30px 30px 0 0
 		a 	
@@ -69,13 +74,8 @@ header
 		color: white
 		letter-spacing: 0.05em
 
-.about
-	h3 
-		@extend %small-bold
-		color: $accent
-		text-align: center
-		padding: 100px 0 30px
-	.icon-block
+section.about
+	.avatar-block
 		max-width: 790px
 		margin: 0 auto 
 		.face-img
@@ -85,32 +85,30 @@ header
 	.text-block
 		max-width: 620px
 		padding: 0 15px
-		margin: 50px auto
+		margin: 70px auto 0
 		text-align: center
 		color: #666666
 		font:
 			size: 24px
 			weight: 300
 	.skill-block
-		max-width: 540px
-		margin: 100px auto
-		color: #999
 		+clearfix
+		max-width: 540px
+		margin: 70px auto 70px
+		color: #999
 .about 
 	.skillbar
+		+box-sizing(border-box)
 		width: 250px
 		height: 50px
-		position: relative
 		margin-bottom: 30px
 		background-color: #edebec
-		box-sizing: border-box
 		border-radius: 3px
 		float: left
 		margin-right: 20px
 		.count-bar
 			height: 100%
 			width: 0px
-			position: relative
 			height: 50px
 			background-color: #249292
 			.title
@@ -122,14 +120,8 @@ header
 				color: white
 			
 
-
 section.projects
 	background: $greyColor
-	h3
-		@extend %small-bold
-		padding: 100px 0 30px
-		color: $accent
-		text-align: center
 	.container	
 		+clearfix
 		max-width: 960px
@@ -165,9 +157,9 @@ section.projects
 				+display(flex)
 				+align-items(center)
 				+justify-content(space-around)
+				+transition(1s)
 				background: fade-out($accent, 0.1)
 				height: 100%
-				transition: 1s
 				text-align: center
 				strong 
 					font-family: Open Sans
@@ -181,32 +173,26 @@ section.projects
 				top: 0%
 
 section.contact
-	// font-size: 100%
 	text-align: center
 	.container
 		max-width: 960px
 		margin: 0 auto
 		padding-bottom: 100px
-		h3 
-			@extend %small-bold
-			color: $accent
-			text-align: center
-			padding: 100px 0 30px
 		.social-links
-			max-width: 700px
-			margin: 0px auto 50px
 			+display(flex)
 			+justify-content(space-around)
+			max-width: 700px
+			margin: 0px auto 50px
 			a 
+				+size(50px)
+				+transition
 				display: block 
 				background: $accent
-				+size(50px)
 				line-height: 50px
 				color: white
 				border-radius: 50%
 				font-size: 28px
 				text-decoration: none
-				+transition
 				&:hover 
 					+transform(scale(1.2))
 				&:last-child
@@ -226,42 +212,29 @@ section.contact
 			line-height: 1
 			width: 100%
 			display: block
-			
-			
 			&:hover 
 				color: #e1c184
 
-// @media screen and (max-width: 830px)	
-// 	section.contact .container .bigLink
-// 		font-size: 3em	
-// @media screen and (max-width: 510px)	
-// 	section.contact .container .bigLink
-// 		font-size: 2em	
 
 section.form 
 	background: $greyColor
 	height: 100%
-	h3
-		@extend %small-bold
-		color: $accent
-		text-align: center
-		padding: 100px 0 30px
 	form 
 		max-width: 500px
 		margin: 0 auto 50px 
 		.contact-info-group
 			label
+				+box-sizing(border-box)
 				width: 50%
 				float: left
-				+box-sizing(border-box)
 				&:nth-child(1)
 					padding-right: 10px
 				&:nth-child(2)
 					padding-left: 10px
 		input, textarea
+			+box-sizing(border-box)
 			border: 3px solid $accent
 			width: 100%
-			+box-sizing(border-box)
 			padding: 10px
 			&:focus
 				outline: none
@@ -285,6 +258,7 @@ section.form
 					background: #e1c184
 					border-color: #e1c184
 
+
 // Making website responsive
 @media screen and (max-width: 640px)
 	header .logo 
@@ -305,20 +279,20 @@ section.form
 		width: 220px
 
 @media screen and (max-width: 650px)
-	.about .icon-block
+	.about .avatar-block
 		display: block
 		text-align: center
 	.about div 
 		display: inline-block
-	.about .icon-block .face-img
+	.about .avatar-block .face-img
 		background-position: center center
 		background-repeat: no-repeat
 		width: 100%
 		margin-bottom: 30px
-	.about .icon-block [class^="icon-"]
-		margin: 10px
 	.about .text-block 
 		margin-top: 0
+	.about .skill-block
+		margin-top: -10px
 
 @media screen and (max-width: 760px)	
 	section.projects .container .container-item

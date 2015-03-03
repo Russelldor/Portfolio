@@ -1,15 +1,14 @@
 $(function() {
-	smoothScroll(600);
+	smoothScroll(2000);
 	$("header h1").fitText(1, { minFontSize: '20px', maxFontSize: '72px' });
 	$("#bl").fitText(1.2, { minFontSize: '10px', maxFontSize: '70px' });
-	// workBelt();
-	// workLoad();
-	// clientStuff();
-	
-		
+	skillBar();
 });
 
-// smoothScroll function is applied from the document ready function
+
+// ----------------------SMOTH SCROLL FUNCTION ----------------
+
+
 function smoothScroll (duration) {
 	$('a[href^="#"]').on('click', function(event) {
 
@@ -24,7 +23,8 @@ function smoothScroll (duration) {
 	});
 }
 
-(function( $ ){
+// ----------------------FIT TEXT FUNCTION ---------------------
+
 
   $.fn.fitText = function( kompressor, options ) {
 
@@ -55,4 +55,20 @@ function smoothScroll (duration) {
 
   };
 
-})( jQuery );
+// ----------------------FIT TEXT FUNCTION ---------------------
+
+
+function skillBar(){
+	
+		jQuery('.skillbar').each(function() {
+			jQuery(this).appear(function() {
+				jQuery(this).find('.count-bar').animate({
+					width:jQuery(this).attr('data-percent')
+				},3000);
+				var percent = jQuery(this).attr('data-percent');
+				jQuery(this).find('.count').html('<span>' + percent + '</span>');
+			});
+		});	
+	}
+
+

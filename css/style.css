@@ -49,10 +49,6 @@ header nav a, header .subtitle, .about h3, section.projects h3, section.contact 
   text-transform: uppercase;
 }
 
-.about .skill-block .skill-item .skill-icons.skill-1 span:nth-child(n+2), .about .skill-block .skill-item .skill-icons.skill-2 span:nth-child(n+3), .about .skill-block .skill-item .skill-icons.skill-3 span:nth-child(n+4), .about .skill-block .skill-item .skill-icons.skill-4 span:nth-child(n+5), .about .skill-block .skill-item .skill-icons.skill-5 span:nth-child(n+6), .about .skill-block .skill-item .skill-icons.skill-6 span:nth-child(n+7), .about .skill-block .skill-item .skill-icons.skill-7 span:nth-child(n+8), .about .skill-block .skill-item .skill-icons.skill-8 span:nth-child(n+9), .about .skill-block .skill-item .skill-icons.skill-9 span:nth-child(n+10), .about .skill-block .skill-item .skill-icons.skill-10 span:nth-child(n+11) {
-  background: #999;
-}
-
 body {
   font-family: Open Sans;
   background: #fff;
@@ -145,30 +141,32 @@ header .subtitle {
   display: table;
   clear: both;
 }
-.about .skill-block .skill-item {
-  width: 270px;
+
+.about .skillbar {
+  width: 250px;
+  height: 50px;
+  position: relative;
+  margin-bottom: 30px;
+  background-color: #edebec;
+  box-sizing: border-box;
+  border-radius: 3px;
   float: left;
+  margin-right: 20px;
 }
-.about .skill-block .skill-item .skill-icons {
-  font-size: 0;
-  margin: 3px 0 30px;
+.about .skillbar .count-bar {
+  height: 100%;
+  width: 0px;
+  position: relative;
+  height: 50px;
+  background-color: #249292;
 }
-.about .skill-block .skill-item .skill-icons span {
-  display: inline-block;
-  height: 14px;
-  width: 14px;
-  background-color: #c99065;
-  margin-right: 5px;
-  border-radius: 50%;
-}
-.about .skill-block .skill-item .skill-icons span:after {
-  content: "";
-  display: block;
-  height: 10px;
-  width: 10px;
-  background: white;
-  border-radius: 50%;
-  margin: 2px;
+.about .skillbar .count-bar .title {
+  font-size: 15px;
+  font-weight: 400;
+  padding-left: 12px;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: white;
 }
 
 section.projects {

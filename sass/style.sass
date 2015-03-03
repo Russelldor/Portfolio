@@ -78,9 +78,6 @@ header
 	.icon-block
 		max-width: 790px
 		margin: 0 auto 
-		// display: flex 
-		// align-items: center   
-		
 		.face-img
 			+size(181px)
 			background: url(../img/face.jpg)
@@ -99,29 +96,31 @@ header
 		margin: 100px auto
 		color: #999
 		+clearfix
-		.skill-item
-			width: 270px
-			float: left
-			.skill-icons
-				font-size: 0
-				margin: 3px 0 30px
-				span 
-					display: inline-block
-					+size(14px)
-					background-color: $accent
-					margin-right: 5px
-					border-radius: 50%
-					&:after 
-						content: ''
-						display: block 
-						+size(10px)
-						background: white 
-						border-radius: 50%
-						margin: 2px
-				// CYCLE TO CREATE SKILL CLASSES
-				@for $i from 1 through 10
-					&.skill-#{$i} span:nth-child(n+#{$i+1})
-						@extend %skill-color
+.about 
+	.skillbar
+		width: 250px
+		height: 50px
+		position: relative
+		margin-bottom: 30px
+		background-color: #edebec
+		box-sizing: border-box
+		border-radius: 3px
+		float: left
+		margin-right: 20px
+		.count-bar
+			height: 100%
+			width: 0px
+			position: relative
+			height: 50px
+			background-color: #249292
+			.title
+				font-size: 15px
+				font-weight: 400
+				padding-left: 12px
+				line-height: 40px
+				text-transform: uppercase
+				color: white
+			
 
 
 section.projects
